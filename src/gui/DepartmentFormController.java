@@ -38,7 +38,7 @@ public class DepartmentFormController implements Initializable {
 	private TextField txtName;
 	
 	@FXML
-	private Label labelErroName;
+	private Label labelErrorName;
 	
 	@FXML
 	private Button btSave;
@@ -111,7 +111,7 @@ public class DepartmentFormController implements Initializable {
 	}
 
 	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+	public void initialize(URL url, ResourceBundle rb) {
 		initializeNodes();
 	}
 
@@ -132,7 +132,7 @@ public class DepartmentFormController implements Initializable {
 		Set<String> fields = errors.keySet();
 		
 		if (fields .contains("name")) {
-			labelErroName.setText(errors.get("name"));
+			labelErrorName.setText(errors.get("name"));
 		}
 	}
 }
